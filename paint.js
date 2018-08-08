@@ -7,13 +7,17 @@ var previousPoint={x:0, y:0};
 var mousePressed=false;
 var color="#000000";
 context.lineCap="round";
+const cstColor=document.getElementById("customColor");
+const custom=document.getElementById("customColor");
+custom.onchange=function(){color=this.value;cstColor.style.backgroundColor=color;}
 var brushSize=2;
 const Clear=document.getElementById("clear");
 Clear.onclick=function(){clear()};
 const brush=document.getElementById("size");
 brush.onchange=function(){
-    brushSize=this.options[this.selectedIndex].value;
-    context.lineWidth = brushSize;
+brushSize=this.options[this.selectedIndex].value;
+context.lineWidth = brushSize;
+
 }
 for(var r=0, max=2; r<=max; r++){
     for(var g=0; g<=max; g++){
@@ -32,7 +36,7 @@ function setColor(obj){
 
     canvas.onmousemove= function(evt) { 
         Position(evt.offsetX, evt.offsetY);
-        console.log(brushSize)
+        
         if(mousePressed){
             draw()
         }
@@ -49,7 +53,7 @@ function setColor(obj){
         context.closePath();
         }
         previousPoint={x:currentPoint.x, y:currentPoint.y}
-        console.log(previousPoint);
+        
     }
 
     function Position(x,y){
@@ -57,6 +61,7 @@ function setColor(obj){
     }
     canvas.onmousedown=function(evt){
         Position(evt.offsetX,evt.offsetY)
+        
         draw()
         mousePressed = true;
     }

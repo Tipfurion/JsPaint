@@ -28,10 +28,10 @@
                             }
                     canvas {position: relative;
                              border:solid 4px #aaa; }
-                    #save,#clear{
+                    td  {
                             background:#eee;
                             color:black;
-                            padding:10px;
+                            padding:5px;
                             width:50px;
                             text-align: center;
                             font-size: 18px;
@@ -47,12 +47,20 @@
                             font-size: 14px; 
     
 }
+                    #customColor{
+                        width: 100px;
+                    }
             </style>
         </head>
         <body >
                 <canvas id="canvas" width="800" height="600"></canvas>
                 
                 <table>
+                    <tr>
+                    <td id="save">Save</td>
+                    <td>Brush size</td>
+                    <td>Custom color</td>        
+                    </tr>
                         <tr>
                           <td><div id="clear">Clear</div></td>
                           <td><select name="brushSize" id="size">
@@ -66,8 +74,14 @@
                                 <option value="16">16</option>
                                 <option value="18">18</option>
                                 <option value="20">20</option>
+                                <option value="22">22</option>
+                                <option value="24">24</option>
+                                <option value="26">26</option>
+                                <option value="28">28</option>
+                                <option value="30">30</option>
+                                <option value="56">56</option>
                               </select></td>
-                             
+                             <td><input type="text" id="customColor" ></td>
 
                               
                         </tr>
