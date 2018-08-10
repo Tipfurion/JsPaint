@@ -40,7 +40,7 @@ function setColor(obj){
     color=obj.style.backgroundColor;
 }
 
-    canvas.onmousemove= function(evt) { 
+    tech.onmousemove= function(evt) { 
         Position(evt.offsetX, evt.offsetY);
         
         if(mousePressed){
@@ -74,7 +74,7 @@ function setColor(obj){
     function Position(x,y){
         currentPoint={x:x, y:y};
     }
-    canvas.onmousedown=function(evt){
+    tech.onmousedown=function(evt){
         Position(evt.offsetX,evt.offsetY)
         if(isStraight==true){
             straightDraw= setInterval(function(){
@@ -90,7 +90,7 @@ function setColor(obj){
         draw()
         mousePressed = true;
     }
-    canvas.onmouseup=function(){
+    tech.onmouseup=function(){
         mousePressed = false;
        if(isStraight==true){
         techLayer.closePath();
@@ -102,7 +102,7 @@ function setColor(obj){
        }
      
     }
-   canvas.onmouseout=function(){mousePressed=false;}
+   tech.onmouseout=function(){mousePressed=false;}
         
     
 

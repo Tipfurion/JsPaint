@@ -26,7 +26,7 @@
                             
                             
                             }
-                    #canvas {position: relative;
+                    #canvas {position: fixed;
                     
                              border:solid 4px #aaa;
                              background-color: transparent; }
@@ -55,7 +55,9 @@
                     #techLayer{
                         border:solid 4px #aaa;
                         background-color: transparent;
-                        position:fixed;
+                        position: relative;
+                        
+                        
                         
                     }
             </style>
@@ -63,8 +65,9 @@
         <body >
             
                
-                <canvas id="techLayer" width="800" height="600"></canvas>
+                
                 <canvas id="canvas" width="800" height="600"></canvas> 
+                <canvas id="techLayer" width="800" height="600"></canvas>
                 <table>
                     <tr>
                     <td id="save">Save</td>
