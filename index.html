@@ -26,8 +26,10 @@
                             
                             
                             }
-                    canvas {position: relative;
-                             border:solid 4px #aaa; }
+                    #canvas {position: relative;
+                    
+                             border:solid 4px #aaa;
+                             background-color: transparent; }
                     td  {
                             background:#eee;
                             color:black;
@@ -50,11 +52,19 @@
                     #customColor{
                         width: 100px;
                     }
+                    #techLayer{
+                        border:solid 4px #aaa;
+                        background-color: transparent;
+                        position:fixed;
+                        
+                    }
             </style>
         </head>
         <body >
-                <canvas id="canvas" width="800" height="600"></canvas>
-                
+            
+               
+                <canvas id="techLayer" width="800" height="600"></canvas>
+                <canvas id="canvas" width="800" height="600"></canvas> 
                 <table>
                     <tr>
                     <td id="save">Save</td>
@@ -64,8 +74,9 @@
                         <tr>
                           <td><div id="clear">Clear</div></td>
                           <td><select name="brushSize" id="size">
-                                <option value="2" >2</option>
-                                <option value="4" >4</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="4">4</option>
                                 <option value="6">6</option>
                                 <option value="8">8</option>
                                 <option value="10">10</option>
