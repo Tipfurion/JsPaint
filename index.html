@@ -26,7 +26,7 @@
                             
                             
                             }
-                    #canvas {position: fixed;
+                    #canvas {position: absolute;
                     
                              border:solid 4px #aaa;
                              background-color: transparent; }
@@ -39,7 +39,7 @@
                             font-size: 18px;
                             border: 1px solid black ;
 
-}
+                        }       
                     select{
                             background:#eee;
                             color: black;
@@ -48,24 +48,30 @@
                             border: 1px solid black ;
                             font-size: 14px; 
     
-}
+                            }
                     #customColor{
                         width: 100px;
                     }
                     #techLayer{
-                        border:solid 4px #aaa;
-                        background-color: transparent;
-                        position: relative;
+                              border:solid 4px #aaa;
+                              background-color: transparent;
+                               position: relative;
+                      }
+                      #tools{
+                          position: absolute;
+                          left: 820px;
+                          top: 6px;
+                          color:black;
                         
-                        
-                        
-                    }
+                            text-align: center;
+                            font-size: 18px;
+                          
+                      }
             </style>
         </head>
         <body >
             
                
-                
                 <canvas id="canvas" width="800" height="600"></canvas> 
                 <canvas id="techLayer" width="800" height="600"></canvas>
                 <table>
@@ -100,7 +106,21 @@
                               
                         </tr>
                         <div id="palette"></div>
-                      
+                    </td>
+                    
+                </table>
+                <div id="tools">
+                    <table>
+                        <tr>
+                            <td>tools</td>
+                        </tr>
+                        <tr>
+                            <td>Straight</td>
+                        </tr>
+                    </table>
+
+                </div>
+                   
                  <script src="paint.js"></script>
               
               
