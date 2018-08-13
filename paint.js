@@ -1,10 +1,18 @@
+var canvasHeight=600;
+var canvasWidth=800;
+const palette = document.getElementById("palette");
+const layers = document.getElementById("layers");
+init();
+const cvsWidth = document.getElementById("canvasWidth")
+const cvsHeight = document.getElementById("canvasHeight")
 const canvas = document.getElementById("canvas");
 const context = canvas.getContext("2d");
-const palette=document.getElementById("palette");
-const tech=document.getElementById("techLayer");
-const techLayer=tech.getContext("2d");
-const straight= document.getElementById("straight");
+const tech = document.getElementById("techLayer");
+const techLayer = tech.getContext("2d");
+const straight = document.getElementById("straight");
 const rectangle = document.getElementById("rectangle");
+
+
 
 var rectangleDraw;
 var straightDraw;
@@ -14,7 +22,6 @@ var currentPoint={x:0, y:0};
 var previousPoint={x:0, y:0};
 var mousePressed=false;
 var color="#000000";
-//const cstColor=document.getElementById("customColor");
 const custom=document.getElementById("customColor");
 custom.onchange=function(){color=this.value;cstColor.style.backgroundColor=color;}
 var brushSize=2;
@@ -27,6 +34,16 @@ context.lineWidth = brushSize;
 context.lineCap="round";
 techLayer.lineWidth = brushSize;
 techLayer.lineCap="round";
+}
+cvsWidth.onchange=function(){
+    canvasWidth=this.value;
+    canvas.width=canvasWidth;
+    tech.width=canvasWidth;
+}
+cvsHeight.onchange=function(){
+    canvasHeight=this.value;
+    canvas.height=canvasHeight;
+    tech.height=canvasHeight
 }
 
 straight.onclick=function(){
@@ -47,7 +64,7 @@ rectangle.onclick=function(){
             rectangle.style.backgroundColor="#eee";
             isRectangle=false;}
         }
-
+function init(){  
 for(var r=0, max=2; r<=max; r++){
     for(var g=0; g<=max; g++){
         for(var b=0; b<=max; b++){
@@ -58,6 +75,7 @@ for(var r=0, max=2; r<=max; r++){
         }
         
     }
+}
 }
 function setColor(obj){
     color=obj.style.backgroundColor;

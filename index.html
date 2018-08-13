@@ -30,6 +30,10 @@
                     
                              border:solid 4px #aaa;
                              background-color: transparent; }
+                    #canvasSize{
+                        width: 100px;
+                    }
+                   
                     td  {
                             background:#eee;
                             color:black;
@@ -71,14 +75,16 @@
         </head>
         <body >
             
-               
+            <div id="layers">
                 <canvas id="canvas" width="800" height="600"></canvas> 
                 <canvas id="techLayer" width="800" height="600"></canvas>
+            </div>
                 <table>
                     <tr>
                     <td id="save">Save</td>
                     <td>Brush size</td>
-                    <td>Custom color</td>        
+                    <td>Custom color</td> 
+                    <td id="canvasSize">Canvas size</td>       
                     </tr>
                         <tr>
                           <td><div id="clear">Clear</div></td>
@@ -102,6 +108,8 @@
                                 <option value="56">56</option>
                               </select></td>
                              <td><input type="text" id="customColor" ></td>
+                             <td ><input type="text" id="canvasWidth" > <input type="text" id="canvasHeight" ></td>
+                            
 
                               
                         </tr>
@@ -116,6 +124,8 @@
                         </tr>
                         <tr>
                             <td id="straight">Straight</td>
+                        </tr>
+                        <tr>
                             <td id="rectangle">Rectangle</td>
                         </tr>
                     </table>
